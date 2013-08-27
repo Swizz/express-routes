@@ -1,6 +1,6 @@
 {
   "name": "express-routes",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Route helper for Express",
   "keywords": [
     "express",
