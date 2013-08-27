@@ -23,8 +23,8 @@ On your app file, include express-routes, configure it, and use it with your Exp
 ``` javascript
 var routes = require('express-routes');
 
-// configure the helper
-routes.configure({
+// use the helper
+routes(app, {
   // directory where the helper will look for route files automatically (optional)
   directory: [path.join(__dirname, 'myRoutesDirectory1'), path.join(__dirname, 'myRoutesDirectory2')],
   // the base path of your application to generate absolute URLs
@@ -37,9 +37,6 @@ routes.configure({
     getPattern: 'pattern'
   }
 });
-
-// use the helper
-routes(app);
 ```
 
 ### Route files
@@ -102,7 +99,7 @@ The available options are:
 
 ##License
 
-MIT License
+(The MIT License)
 
 Copyright (c) 2012 Diego Luces <me@dluces.com>
 
