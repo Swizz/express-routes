@@ -16,14 +16,14 @@ describe('routes', function(){
     it('should configure the module correctly', function(){
       routes.configure({
         basePath: 'http://local.host',
-        prefix: '/app/',
+        prefix: '/site/',
         helpers: {
           generateUrl: 'genUrl'
         }
       });
 
       assert.equal('http://local.host', routes.config.basePath);
-      assert.equal('/app/', routes.config.prefix);
+      assert.equal('/site/', routes.config.prefix);
       assert.equal('genUrl', routes.config.helpers.generateUrl);
     });
 
@@ -39,7 +39,9 @@ describe('routes', function(){
 
   describe('express helper', function(){
     it('should not error when calling the helper', function(){
-      routes(app);
+      routes(app, {
+        prefix: '/app/'
+      });
     });
   });
 
