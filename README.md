@@ -67,9 +67,11 @@ routes.register([
     // the pattern for the route, the prefix specified in the configuration will be added at the begining (should not include it)
     pattern: 'myRoute/:pattern',
     // functions for each VERB that Express uses
-    all: get: function(req, res, next) {...},
+    all: function(req, res, next) {...},
     get: function(req, res, next) {...},
     post: function(req, res, next) {...},
+    put: function(req, res, next) {...},
+    del: function(req, res, next) {...},
   }
 ]);
 ```
@@ -101,7 +103,7 @@ The available options are:
 
 (The MIT License)
 
-Copyright (c) 2012 Diego Luces <me@dluces.com>
+Copyright (c) 2014 Diego Luces <me@dluces.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
